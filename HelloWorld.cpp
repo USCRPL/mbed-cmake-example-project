@@ -1,13 +1,13 @@
 #include "mbed.h"
 
-BufferedSerial serial(USBTX, USBRX, 115200);
+Serial serial(USBTX, USBRX, 115200);
 
 int main() {
 
 	while(true)
 	{
-		char const message[] = "Hello world!\n";
-		serial.write(message, sizeof(message));
+		char const message[] = "Hello world from mbed-cmake retro!\n";
+		serial.printf(message);
 		ThisThread::sleep_for(1000);
 	}
 }
