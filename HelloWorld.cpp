@@ -6,8 +6,8 @@ int main() {
 
 	while(true)
 	{
-		char const message[] = "Hello world from mbed-cmake retro!\n";
+		char const message[] = "Hello world from mbed-cmake paleo!\n";
 		serial.printf(message);
-		ThisThread::sleep_for(1000);
+		wait(1);
 	}
 }
